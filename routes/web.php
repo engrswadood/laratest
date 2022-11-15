@@ -37,7 +37,7 @@ Route::group(['middleware' => 'auth'], function()
 
 
 
-/*Route::group(['middleware' => 'auth'], function()
+Route::group(['middleware' => 'auth'], function()
 {
 	Route::resource('post', PostController::class);
     //Route::get('post/', [PostController::class, 'index']);
@@ -45,4 +45,4 @@ Route::group(['middleware' => 'auth'], function()
 	//Route::post('post/', [PostController::class, 'store']);
 	//Route::put('post/{id}', [PostController::class, 'update']);
 	//Route::delete('post/{id}', [PostController::class, 'destroy']);
-});*/
+});
