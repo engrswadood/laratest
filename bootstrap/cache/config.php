@@ -405,12 +405,19 @@
     'deprecations' => NULL,
     'channels' => 
     array (
+      'incomingref' => 
+      array (
+        'driver' => 'single',
+        'level' => 'debug',
+        'bubble' => false,
+        'path' => 'C:\\wamp64\\www\\test\\storage\\logs/incoming-referers.log',
+      ),
       'stack' => 
       array (
         'driver' => 'stack',
         'channels' => 
         array (
-          0 => 'single',
+          0 => 'incomingref',
         ),
         'ignore_exceptions' => false,
       ),
@@ -476,10 +483,6 @@
       'emergency' => 
       array (
         'path' => 'C:\\wamp64\\www\\test\\storage\\logs/laravel.log',
-      ),
-      'info' => 
-      array (
-        'path' => 'C:\\wamp64\\www\\test\\storage\\logs/incoming-referers.log.log',
       ),
     ),
   ),

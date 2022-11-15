@@ -48,9 +48,19 @@ return [
     */
 
     'channels' => [
+		
+		
+		
+		'incomingref' => [
+		 'driver' => 'single',
+		'level'  => 'debug',		
+		'bubble' => false,
+        'path' => storage_path('logs/incoming-referers.log'),
+        ],
+		
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
+            'channels' => ['incomingref'],
             'ignore_exceptions' => false,
         ],
 
@@ -114,6 +124,7 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+		
 		
 		
 		
