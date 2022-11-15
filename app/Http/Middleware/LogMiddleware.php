@@ -7,8 +7,9 @@ use Closure;
 
 class LogMiddleware {
    public function handle($request, Closure $next) {//incomingref
-	  Log::info("__ ".Auth::user()->name."\n\n");
-	  //Log::info("__ ".Auth::user()->name."\n\n");
-      return $next($request);
+		if(Auth::user())
+			Log::info("__ ".Auth::user()->name."\n\n");
+		//Log::info("__ ".Auth::user()->name."\n\n");
+		return $next($request);
    }
 }
