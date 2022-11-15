@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,13 @@ Route::get('/name/{namepar}', [App\Http\Controllers\NameFinder::class, 'findDeta
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('images', ImageController::class);
+
+/*
+php artisan make:controller ImgController --resource --model=Product
+
+*/
+
+
 

@@ -9,7 +9,6 @@ class LogMiddleware {
    public function handle($request, Closure $next) {//incomingref
 		if(Auth::user())
 			Log::info("__ ".Auth::user()->name."\n\n");
-		//Log::info("__ ".Auth::user()->name."\n\n");
 		return $next($request);
    }
 }
