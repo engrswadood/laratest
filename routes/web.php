@@ -22,12 +22,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('images', ImageController::class);
-
-/*
-php artisan make:controller ImgController --resource --model=Product
-
-*/
 
 
+//  Route::resource('images', ImageController::class);
+
+
+Route::group(['middleware' => 'auth'], function()
+{
+     Route::resource('images', ImageController::class);
+});
 
